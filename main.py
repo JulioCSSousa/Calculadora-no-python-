@@ -17,10 +17,10 @@ window.geometry('235x318')
 #display
 window.config(bg=black)
 
-frame_window = Frame(window, width=235, height=50, bg=black)
+frame_window = Frame(window, width=235, height=50,bg=black)
 frame_window.grid(row=0,column=0)
 
-frame_body = Frame(window, width=235, height=268, bg=black)
+frame_body = Frame(window, width=235, height=268,bg=black)
 frame_body.grid(row=1,column=0)
 
 allValue = ''
@@ -48,17 +48,17 @@ def clear():
 #labels
 valueText = StringVar()
 
-cal_label = Label(frame_window, textvariable=valueText, width=16, height=2, padx= 7, relief=FLAT, anchor= "e", justify=LEFT, font=('ivy 18'),bg=grey2)
+cal_label = Label(frame_window, textvariable=valueText, width=16, height=2, padx= 7, relief=FLAT, anchor= "e", justify=LEFT, font=('ivy 18'),bg=grey)
 cal_label.place(x=0,y=0)
 
 
 #bottoms
-b1 = Button(frame_body, command=clear, text='c', width=11, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
+b1 = Button(frame_body, command=clear, text='c', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
 b1.place(x=0, y=0)
 b2 = Button(frame_body, command=lambda: putValue('%'), text='%', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
-b2.place(x=118, y=0)
+b2.place(x=59, y=0)
 b3 = Button(frame_body, command=lambda: putValue('/'), text='/', width=5, height=2, font=('ivy 13 bold'), relief=RAISED, overrelief=RIDGE, bg=green)
-b3.place(x=177, y=0)
+b3.place(x=178, y=0)
 
 b4 = Button(frame_body, command=lambda: putValue('7'), text='7', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
 b4.place(x=0, y=52)
@@ -91,9 +91,10 @@ b16 = Button(frame_body, command=lambda: putValue('0'), text='0', width=11, heig
 b16.place(x=0, y=208)
 b17 = Button(frame_body, command=lambda: putValue('.'), text='.', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
 b17.place(x=118, y=208)
-b18 = Button(frame_body, command= calcular, text='=', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=green2)
+b18 = Button(frame_body, command= calcular, text='=', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=green)
 b18.place(x=177, y=208)
-
+b19 = Button(frame_body, command=lambda: putValue('**'), text='^', width=5, height=2, font=('ivy 13 bold'),relief=RAISED, overrelief=RIDGE,bg=grey)
+b19.place(x=118, y=0)
 
 window.mainloop()
 
